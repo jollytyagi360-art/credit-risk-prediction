@@ -1,34 +1,80 @@
 # 💳 Credit Risk Prediction App
 
-🚀 Live App: https://credit-risk-prediction-xxxx.streamlit.app
+🚀 Live App: https://credit-risk-prediction-hssajzo9xv9scmcwqsdl2l.streamlit.app
 
 ---
 
-## 📌 Project Overview
+## 📌 Business Problem
 
-This project predicts whether a loan applicant is a **High Risk** or **Low Risk** customer using Machine Learning.
+Financial institutions face a major challenge in identifying whether a loan applicant is likely to **default (High Risk)** or **repay (Low Risk)**.
 
-It helps banks and financial institutions make **data-driven loan approval decisions**, reducing default risk.
+Incorrect decisions can lead to:
+- High financial losses  
+- Increased non-performing assets (NPAs)  
+- Inefficient credit allocation  
+
+👉 The goal of this project is to build a **machine learning solution** that helps banks **assess credit risk before loan approval**.
+
+---
+
+## 🎯 Objective
+
+To develop a predictive model that classifies applicants into:
+
+- ✅ Low Risk (Safe to approve loan)  
+- ⚠️ High Risk (Potential default risk)  
 
 ---
 
 ## ⚙️ Tech Stack
 
-- Python 🐍
-- Pandas, NumPy
-- Scikit-learn
-- XGBoost
-- Streamlit (Deployment)
+- Python 🐍  
+- Pandas, NumPy  
+- Scikit-learn  
+- XGBoost  
+- Streamlit (Deployment)  
 
 ---
 
-## 🧠 Machine Learning Pipeline
+## 🧠 Machine Learning Approach
 
-✔ Data Cleaning & Preprocessing  
-✔ Feature Engineering  
-✔ Model Training (Logistic Regression, Random Forest, XGBoost)  
-✔ Model Evaluation  
-✔ Deployment using Streamlit  
+### 1. Data Preprocessing
+- Handling missing values  
+- Encoding categorical variables  
+- Feature scaling  
+
+---
+
+### 2. Feature Engineering
+- Income + Co-applicant income → **Total Income**  
+- Created **Income-Loan Ratio**  
+- Applied **log transformation** to reduce skewness  
+
+---
+
+### 3. Model Building
+
+Trained and compared multiple models:
+
+- Logistic Regression (Baseline)  
+- Random Forest  
+- XGBoost (Best performance)  
+
+---
+
+### 4. Model Evaluation
+
+- Accuracy comparison  
+- Generalization on test data  
+- Selection based on performance & stability  
+
+---
+
+### 5. Deployment
+
+- Built interactive UI using **Streamlit**  
+- Integrated trained model (`model.pkl`)  
+- Deployed on **Streamlit Cloud**  
 
 ---
 
@@ -36,9 +82,9 @@ It helps banks and financial institutions make **data-driven loan approval decis
 
 - Real-time prediction via UI  
 - Handles both numerical & categorical inputs  
-- Feature engineering (Income Ratio, Log Transformations)  
-- Model comparison for best performance  
-- Fully deployed ML application  
+- Feature engineering for better accuracy  
+- Model comparison for optimal performance  
+- End-to-end ML pipeline deployment  
 
 ---
 
