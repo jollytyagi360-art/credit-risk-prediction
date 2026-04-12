@@ -1,28 +1,30 @@
 # 💳 Credit Risk Prediction App
 
-🚀 Live App: https://credit-risk-prediction-hssajzo9xv9scmcwqsdl2l.streamlit.app
+🚀 Live App: https://credit-risk-prediction-hssajzo9xv9scmcwqsdl2l.streamlit.app  
+
+💻 GitHub Repository:  
+https://github.com/jollytyagi360-art/credit-risk-prediction  
+
+🎬 Demo Video:  
+👉 https://www.linkedin.com/posts/nishant-tyagi-7aa458356_machinelearning-datascience-python-activity-7449094279098167296-lXfT
 
 ---
 
 ## 📌 Business Problem
 
-Financial institutions face a major challenge in identifying whether a loan applicant is likely to **default (High Risk)** or **repay (Low Risk)**.
+Financial institutions need to decide whether a loan applicant is likely to repay or default.  
+Wrong decisions can lead to financial losses, increased NPAs, and poor risk management.
 
-Incorrect decisions can lead to:
-- High financial losses  
-- Increased non-performing assets (NPAs)  
-- Inefficient credit allocation  
-
-👉 The goal of this project is to build a **machine learning solution** that helps banks **assess credit risk before loan approval**.
+👉 This project solves that problem by predicting whether a customer is **High Risk or Low Risk** before loan approval.
 
 ---
 
 ## 🎯 Objective
 
-To develop a predictive model that classifies applicants into:
+To build a machine learning model that classifies applicants into:
 
-- ✅ Low Risk (Safe to approve loan)  
-- ⚠️ High Risk (Potential default risk)  
+- ✅ Low Risk (Safe to approve)  
+- ⚠️ High Risk (Potential default)  
 
 ---
 
@@ -39,56 +41,64 @@ To develop a predictive model that classifies applicants into:
 ## 🧠 Machine Learning Approach
 
 ### 1. Data Preprocessing
-- Handling missing values  
-- Encoding categorical variables  
-- Feature scaling  
+- Handled missing values  
+- Encoded categorical variables  
+- Scaled numerical features  
 
 ---
 
 ### 2. Feature Engineering
-- Income + Co-applicant income → **Total Income**  
+- Created **Total Income**  
 - Created **Income-Loan Ratio**  
-- Applied **log transformation** to reduce skewness  
+- Applied **log transformation**  
 
 ---
 
 ### 3. Model Building
 
-Trained and compared multiple models:
+Trained multiple models:
 
-- Logistic Regression (Baseline)  
+- Logistic Regression  
 - Random Forest  
-- XGBoost (Best performance)  
+- XGBoost  
 
 ---
 
 ### 4. Model Evaluation
 
-- Accuracy comparison  
-- Generalization on test data  
-- Selection based on performance & stability  
+- Compared model performance  
+- Selected best model based on accuracy  
 
 ---
 
 ### 5. Deployment
 
-- Built interactive UI using **Streamlit**  
-- Integrated trained model (`model.pkl`)  
-- Deployed on **Streamlit Cloud**  
+- Built UI using Streamlit  
+- Integrated trained model  
+- Deployed on Streamlit Cloud  
 
 ---
 
-## 📊 Key Features
+## 📊 Model Performance
 
-- Real-time prediction via UI  
-- Handles both numerical & categorical inputs  
-- Feature engineering for better accuracy  
-- Model comparison for optimal performance  
-- End-to-end ML pipeline deployment  
+- Logistic Regression → ~78% accuracy  
+- Random Forest → ~81% accuracy  
+- XGBoost → ~79% accuracy  
+
+👉 Random Forest performed best overall.
 
 ---
 
-## 🧪 Input Features
+## 📌 Key Insights
+
+- Credit History is the most important feature  
+- High loan + low income increases risk  
+- Feature engineering improved accuracy  
+- Tree-based models outperformed linear models  
+
+---
+
+## 📊 Input Features
 
 - Loan Amount  
 - Loan Term  
@@ -110,7 +120,7 @@ Trained and compared multiple models:
 
 ---
 
-## 🖥️ How to Run Locally
+## 🖥️ Run Locally
 
 ```bash
 git clone https://github.com/jollytyagi360-art/credit-risk-prediction.git
