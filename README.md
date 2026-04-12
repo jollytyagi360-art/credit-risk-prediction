@@ -127,3 +127,31 @@ git clone https://github.com/jollytyagi360-art/credit-risk-prediction.git
 cd credit-risk-prediction
 pip install -r requirements.txt
 streamlit run app.py
+🌐 Deployment
+
+This app is deployed using Streamlit Cloud and accessible online.
+
+📸 Demo
+
+👉 Watch Demo:
+https://www.linkedin.com/posts/nishant-tyagi-7aa458356_machinelearning-datascience-python-activity-7449094279098167296-lXfT
+
+📌 Business Impact
+Helps reduce loan defaults
+Improves decision making
+Automates risk assessment
+📊 Conclusion
+Machine learning improves credit risk prediction
+Random Forest gave best performance
+Feature engineering played a key role
+Real-world financial use case implemented
+🚀 Future Improvements
+Add risk probability (%)
+Improve UI
+API deployment (FastAPI)
+Docker integration
+👨‍💻 Author
+
+Nishant Tyagi
+
+⭐ Star this repo if you found it useful!
