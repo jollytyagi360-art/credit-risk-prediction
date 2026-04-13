@@ -1,157 +1,234 @@
-# 💳 Credit Risk Prediction App
+# 💳 Credit Risk Prediction System
 
-🚀 Live App: https://credit-risk-prediction-hssajzo9xv9scmcwqsdl2l.streamlit.app  
+🚀 **Live App (Frontend):**
+https://credit-risk-prediction-hssajzo9xv9scmcwqsdl2l.streamlit.app
 
-💻 GitHub Repository:  
-https://github.com/jollytyagi360-art/credit-risk-prediction  
+⚡ **Live API (Backend):**
+https://credit-risk-prediction-wc7k.onrender.com
 
-🎬 Demo Video:  
-👉 https://www.linkedin.com/posts/nishant-tyagi-7aa458356_machinelearning-datascience-python-activity-7449094279098167296-lXfT
+📄 **API Docs (Swagger UI):**
+https://credit-risk-prediction-wc7k.onrender.com/docs
 
----
+💻 **GitHub Repository:**
+https://github.com/jollytyagi360-art/credit-risk-prediction
 
-## 📌 Business Problem
-
-Financial institutions need to decide whether a loan applicant is likely to repay or default.  
-Wrong decisions can lead to financial losses, increased NPAs, and poor risk management.
-
-👉 This project solves that problem by predicting whether a customer is **High Risk or Low Risk** before loan approval.
+🎬 **Demo Video:**
+https://www.linkedin.com/posts/nishant-tyagi-7aa458356_machinelearning-datascience-python-activity-7449094279098167296-lXfT
 
 ---
 
-## 🎯 Objective
+# 📌 Business Problem
 
-To build a machine learning model that classifies applicants into:
+Financial institutions must decide whether a loan applicant is likely to repay or default.
 
-- ✅ Low Risk (Safe to approve)  
-- ⚠️ High Risk (Potential default)  
+Incorrect decisions lead to:
 
----
+* Financial losses
+* Increased NPAs (Non-Performing Assets)
+* Poor risk management
 
-## ⚙️ Tech Stack
-
-- Python 🐍  
-- Pandas, NumPy  
-- Scikit-learn  
-- XGBoost  
-- Streamlit (Deployment)  
+👉 This project solves the problem by predicting whether a customer is **High Risk or Low Risk** before loan approval.
 
 ---
 
-## 🧠 Machine Learning Approach
+# 🎯 Objective
 
-### 1. Data Preprocessing
-- Handled missing values  
-- Encoded categorical variables  
-- Scaled numerical features  
+To build a **production-level machine learning system** that classifies applicants into:
 
----
-
-### 2. Feature Engineering
-- Created **Total Income**  
-- Created **Income-Loan Ratio**  
-- Applied **log transformation**  
+* ✅ Low Risk (Safe to approve)
+* ⚠️ High Risk (Potential default)
 
 ---
 
-### 3. Model Building
+# 🏗️ System Architecture
+
+Frontend (Streamlit) → API (FastAPI) → ML Model
+
+👉 Clean separation between UI and backend makes the system scalable and production-ready.
+
+---
+
+# ⚙️ Tech Stack
+
+* Python 🐍
+* Pandas, NumPy
+* Scikit-learn
+* XGBoost
+* FastAPI (Backend API)
+* Streamlit (Frontend UI)
+* Render (API Deployment)
+* Streamlit Cloud (Frontend Deployment)
+
+---
+
+# 🧠 Machine Learning Approach
+
+## 1. Data Preprocessing
+
+* Handled missing values
+* Encoded categorical variables
+* Scaled numerical features
+
+---
+
+## 2. Feature Engineering
+
+* Created **Total Income**
+* Created **Income-Loan Ratio**
+* Applied **log transformation**
+
+---
+
+## 3. Model Building
 
 Trained multiple models:
 
-- Logistic Regression  
-- Random Forest  
-- XGBoost  
+* Logistic Regression
+* Random Forest
+* XGBoost
 
 ---
 
-### 4. Model Evaluation
+## 4. Model Evaluation
 
-- Compared model performance  
-- Selected best model based on accuracy  
-
----
-
-### 5. Deployment
-
-- Built UI using Streamlit  
-- Integrated trained model  
-- Deployed on Streamlit Cloud  
+* Compared model performance
+* Selected best model based on accuracy
 
 ---
 
-## 📊 Model Performance
+## 5. Deployment
 
-- Logistic Regression → ~78% accuracy  
-- Random Forest → ~81% accuracy  
-- XGBoost → ~79% accuracy  
-
-👉 Random Forest performed best overall.
-
----
-
-## 📌 Key Insights
-
-- Credit History is the most important feature  
-- High loan + low income increases risk  
-- Feature engineering improved accuracy  
-- Tree-based models outperformed linear models  
+* Built frontend using Streamlit
+* Created REST API using FastAPI
+* Deployed backend on Render
+* Connected frontend with live API
 
 ---
 
-## 📊 Input Features
+# 📊 Model Performance
 
-- Loan Amount  
-- Loan Term  
-- Credit History  
-- Total Income  
-- Gender  
-- Married  
-- Dependents  
-- Education  
-- Self Employed  
-- Property Area  
+* Logistic Regression → ~78% accuracy
+* Random Forest → ~81% accuracy ⭐
+* XGBoost → ~79% accuracy
+
+👉 **Random Forest performed best overall**
 
 ---
 
-## 📈 Output
+# 📌 Key Insights
 
-- ✅ Low Risk Customer  
-- ⚠️ High Risk Customer  
+* Credit History is the most important feature
+* High loan + low income increases default risk
+* Feature engineering improved model performance
+* Tree-based models outperformed linear models
 
 ---
 
-## 🖥️ Run Locally
+# 📊 Input Features
+
+* Loan Amount
+* Loan Term
+* Credit History
+* Total Income
+* Gender
+* Married
+* Dependents
+* Education
+* Self Employed
+* Property Area
+
+---
+
+# 📈 Output
+
+* ✅ Low Risk Customer
+* ⚠️ High Risk Customer
+
+---
+
+# 🔌 API Usage
+
+### Endpoint:
+
+POST /predict
+
+### Example Request:
+
+```json
+{
+  "loan_amount": 120,
+  "loan_term": 360,
+  "credit_history": 1,
+  "total_income": 5000,
+  "gender": "Male",
+  "married": "Yes",
+  "dependents": 1,
+  "education": "Graduate",
+  "self_employed": "No",
+  "property_area": "Urban"
+}
+```
+
+### Response:
+
+```json
+{
+  "prediction": "Low Risk"
+}
+```
+
+---
+
+# 🖥️ Run Locally
 
 ```bash
 git clone https://github.com/jollytyagi360-art/credit-risk-prediction.git
 cd credit-risk-prediction
 pip install -r requirements.txt
 streamlit run app.py
-🌐 Deployment
+```
 
-This app is deployed using Streamlit Cloud and accessible online.
+---
 
-📸 Demo
+# 📸 Demo
 
-👉 Watch Demo:
+🎬 Watch Demo Video:
 https://www.linkedin.com/posts/nishant-tyagi-7aa458356_machinelearning-datascience-python-activity-7449094279098167296-lXfT
 
-📌 Business Impact
-Helps reduce loan defaults
-Improves decision making
-Automates risk assessment
-📊 Conclusion
-Machine learning improves credit risk prediction
-Random Forest gave best performance
-Feature engineering played a key role
-Real-world financial use case implemented
-🚀 Future Improvements
-Add risk probability (%)
-Improve UI
-API deployment (FastAPI)
-Docker integration
-👨‍💻 Author
+---
 
-Nishant Tyagi
+# 📌 Business Impact
 
-⭐ Star this repo if you found it useful!
+* Helps reduce loan defaults
+* Improves decision-making
+* Automates credit risk assessment
+* Saves manual effort for banks
+
+---
+
+# 📊 Conclusion
+
+* Machine Learning improves credit risk prediction
+* Random Forest delivered best performance
+* Feature engineering played a critical role
+* Built a complete end-to-end ML system
+
+---
+
+# 🚀 Future Improvements
+
+* Add risk probability (%)
+* Improve UI/UX
+* Add user authentication
+* Docker containerization
+* Cloud deployment (AWS/GCP)
+
+---
+
+# 👨‍💻 Author
+
+**Nishant Tyagi**
+
+---
+
+⭐ If you found this project useful, consider giving it a star!
